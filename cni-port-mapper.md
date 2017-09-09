@@ -51,7 +51,7 @@ and `20-port-mapper.conf` containing:
    }
 }
 ```
-Copy the CNI plugins from https://github.com/containernetworking/cni/releases into `/opt/cni/bin` as well as the port mapper plugin:
+Copy the CNI plugins from https://github.com/containernetworking/plugins/releases into `/opt/cni/bin` as well as the port mapper plugin:
 ```
 ln -s /usr/libexec/mesos/mesos-cni-port-mapper /opt/cni/bin/mesos-cni-port-mapper
 
