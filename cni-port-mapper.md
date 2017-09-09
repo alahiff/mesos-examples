@@ -95,18 +95,18 @@ Example TaskInfo whicb runs nginx and maps port 80 in the container to port 3100
             }
          }
       },
-         "network_infos":[
-            {
-               "name":"mesos-port-mapper",
-               "port_mappings":[
-                  {
-                     "host_port":31000,
-                     "container_port":80,
-                     "protocol":"tcp"
-                  }
-               ]
-            }
-         ]
+      "network_infos":[
+         {
+            "name":"mesos-port-mapper",
+            "port_mappings":[
+               {
+                  "host_port":31000,
+                  "container_port":80,
+                  "protocol":"tcp"
+               }
+            ]
+         }
+      ]
    }
 }
 ```
