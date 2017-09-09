@@ -1,5 +1,5 @@
-Setting up & using CNI port mapper
-==================================
+Setting up & using the CNI port mapper
+======================================
 
 On the Mesos agent include the following configuration for Mesos:
 ```
