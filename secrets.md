@@ -1,0 +1,57 @@
+Secret passed by value and made available as a file:
+```
+{
+   "name":"secret1",
+   "task_id":{
+      "value":"secret1"
+   },
+   "agent_id":{
+      "value":""
+   },
+   "resources":[
+      {
+         "name":"cpus",
+         "type":"SCALAR",
+         "scalar":{
+            "value":0.1
+         }
+      },
+      {
+         "name":"mem",
+         "type":"SCALAR",
+         "scalar":{
+            "value":32
+         }
+      }
+   ],
+   "command":{
+      "value":"cat /secret"
+   },
+   "container":{
+      "type":"MESOS",
+      "mesos":{
+         "image":{
+            "type":"DOCKER",
+            "docker":{
+               "name":"busybox:latest"
+            }
+         }
+      },
+      "volumes":[
+         {
+            "mode":"RO",
+            "container_path":"/secret",
+            "source":{
+               "type":"SECRET",
+               "secret":{
+                  "type":"VALUE",
+                  "value":{
+                     "data":"aGVsbG8K"
+                  }
+               }
+            }
+         }
+      ]
+   }
+}
+```
